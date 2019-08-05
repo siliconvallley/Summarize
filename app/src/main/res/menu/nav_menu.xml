@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<group android:checkableBehavior="none">
+        <item
+                android:id="@+id/menu_android"
+                android:title="@string/menu_android"/>
+    </group>-->
+    <item
+            android:id="@+id/menu_android"
+            android:title="@string/menu_android"/>
+    <item
+            android:id="@+id/menu_java"
+            android:title="@string/menu_java"/>
+    <item
+            android:id="@+id/menu_algorithm"
+            android:title="@string/menu_algorithm"/>
+    <item
+            android:title="@string/menu_subtitle">
+        <menu>
+            <item
+                    android:id="@+id/menu_answer"
+                    android:title="@string/menu_answer"/>
+        </menu>
+    </item>
+</menu>
