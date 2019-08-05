@@ -1,0 +1,186 @@
+package com.dh.summarize.activity
+
+import android.content.Context
+import android.content.SharedPreferences
+import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
+import com.dh.summarize.R
+import com.dh.summarize.base.ActivityCollector2
+import com.dh.summarize.base.BaseActivity
+import com.dh.summarize.fragment.AlgorithmFragment
+import com.dh.summarize.fragment.AndroidFragment
+import com.dh.summarize.fragment.AnswerFragment
+import com.dh.summarize.fragment.JavaFragment
+import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : BaseActivity() {
+    companion object {
+        private const val INTERVAL_TIME: Long = 2000
+    }
+
+    private val androidFragment by lazy { AndroidFragment.getInstance() }
+    private val javaFragment by lazy { JavaFragment.getInstance() }
+    private val algorithmFragment by lazy { AlgorithmFragment.getInstance() }
+    private val answerFragment by lazy { AnswerFragment.getInstance() }
+    private lateinit var fragments: MutableList<Fragment>
+    /**
+     * 记录每次点击的tab下标
+     */
+    private var preIndex: Int = -1
+    private var firstTime: Long = 0
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_main
+    }
+
+    override fun initViews() {
+        tool_bar.title = getString(R.string.menu_android)
+        setSupportActionBar(tool_bar)
+        val actionBar = actionBar
+        if (actionBar != null) {
+            actionBar.setHomeButtonEnabled(true)
+            actionBar.setDisplayHomeAsUpEnabled(true)
+        }
+        val drawerToggle =
+            object : ActionBarDrawerToggle(this, drawer_layout, tool_bar, R.string.open, R.string.close) {
+                override fun onDrawerStateChanged(newState: Int) {
+                    super.onDrawerStateChanged(newState)
+                }
+
+                override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
+                    super.onDrawerSlide(drawerView, slideOffset)
+                }
+
+                override fun onDrawerOpened(drawerView: View) {
+                    super.onDrawerOpened(drawerView)
+                }
+
+                override fun onDrawerClosed(drawerView: View) {
+                    super.onDrawerClosed(drawerView)
+                }
+            }
+        drawerToggle.syncState()
+        drawer_layout.addDrawerListener(drawerToggle)
+    }
+
+    override fun initListener() {
+        nav_view.setNavigationItemSelectedListener(navItemSelectListener)
+        //drawer_layout.addDrawerListener(drawerListener)
+    }
+
+    override fun initData() {
+        //val intentService = IntentService
+        /*val sp: SharedPreferences = getSharedPreferences("", Context.MODE_PRIVATE)
+        sp.edit {
+            putBoolean("", true)
+        }
+        sp.edit().putBoolean("", true).apply()*/
+        fragments = arrayListOf()
+        fragments.add(androidFragment)
+        fragments.add(javaFragment)
+        fragments.add(algorithmFragment)
+        fragments.add(answerFragment)
+    }
+
+    override fun doBusiness() {
+        selectFragment(0)
+        //tool_bar.title = getString(R.string.menu_android)
+    }
+
+    private val navItemSelectListener =
+        NavigationView.OnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.menu_android -> {
+                    selectFragment(0)
+                }
+                R.id.menu_java -> {
+                    selectFragment(1)
+                }
+                R.id.menu_algorithm -> {
+                    selectFragment(2)
+                }
+                R.id.menu_answer -> {
+                    selectFragment(3)
+                }
+            }
+            tool_bar.title = item.title.toString()
+            drawer_layout.closeDrawer(GravityCompat.START)
+            true
+        }
+
+    private val drawerListener = object : DrawerLayout.DrawerListener {
+        override fun onDrawerStateChanged(newState: Int) {
+        }
+
+        override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
+        }
+
+        override fun onDrawerClosed(drawerView: View) {
+
+        }
+
+        override fun onDrawerOpened(drawerView: View) {
+        }
+
+    }
+
+    private fun selectFragment(index: Int) {
+        // 判断是否是相同下标，避免重复点击
+        if (preIndex == index) return
+        // 开启事物
+        val transaction = supportFragmentManager.beginTransaction()
+        if (preIndex == -1) {
+            transaction.add(R.id.fl_content, fragments[index], fragments[index].javaClass.simpleName)
+        } else {
+            // 隐藏前一个Fragment
+            transaction.hide(fragments[preIndex])
+            // 判断当前Fragment是否被添加过
+            if (!fragments[index].isAdded) {
+                transaction.add(R.id.fl_content, fragments[index], fragments[index].javaClass.simpleName)
+            } else {
+                transaction.show(fragments[index])
+            }
+        }
+        transaction.commit()
+        // 重新赋值
+        preIndex = index
+    }
+
+    override fun onBackPressed() {
+        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
+            drawer_layout.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        drawer_layout.removeDrawerListener(drawerListener)
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event?.action == KeyEvent.ACTION_DOWN) {
+            val secondTime: Long = System.currentTimeMillis()
+            if (secondTime - firstTime > INTERVAL_TIME) {
+                Toast.makeText(mActivity, getString(R.string.down_exit), Toast.LENGTH_SHORT).show()
+                firstTime = secondTime
+                return true
+            } else {
+                ActivityCollector2.popTaskAll()
+                //杀死应用的进程
+                android.os.Process.killProcess(android.os.Process.myPid())
+            }
+        }
+        return super.onKeyDown(keyCode, event)
+    }
+}
