@@ -15,10 +15,7 @@ import androidx.fragment.app.Fragment
 import com.dh.summarize.R
 import com.dh.summarize.base.ActivityCollector2
 import com.dh.summarize.base.BaseActivity
-import com.dh.summarize.fragment.AlgorithmFragment
-import com.dh.summarize.fragment.AndroidFragment
-import com.dh.summarize.fragment.AnswerFragment
-import com.dh.summarize.fragment.JavaFragment
+import com.dh.summarize.fragment.*
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -29,6 +26,7 @@ class MainActivity : BaseActivity() {
 
     private val androidFragment by lazy { AndroidFragment.getInstance() }
     private val javaFragment by lazy { JavaFragment.getInstance() }
+    private val kotlinFragment by lazy { KotlinFragment.getInstance() }
     private val algorithmFragment by lazy { AlgorithmFragment.getInstance() }
     private val answerFragment by lazy { AnswerFragment.getInstance() }
     private lateinit var fragments: MutableList<Fragment>
@@ -87,6 +85,7 @@ class MainActivity : BaseActivity() {
         fragments = arrayListOf()
         fragments.add(androidFragment)
         fragments.add(javaFragment)
+        fragments.add(kotlinFragment)
         fragments.add(algorithmFragment)
         fragments.add(answerFragment)
     }
@@ -105,11 +104,14 @@ class MainActivity : BaseActivity() {
                 R.id.menu_java -> {
                     selectFragment(1)
                 }
-                R.id.menu_algorithm -> {
+                R.id.menu_kotlin -> {
                     selectFragment(2)
                 }
-                R.id.menu_answer -> {
+                R.id.menu_algorithm -> {
                     selectFragment(3)
+                }
+                R.id.menu_answer -> {
+                    selectFragment(4)
                 }
             }
             tool_bar.title = item.title.toString()

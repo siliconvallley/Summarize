@@ -13,6 +13,8 @@ import leakcanary.LeakCanary
  */
 class BaseApplication : MultiDexApplication() {
     companion object {
+        // 注解是为了保证，在kotlin和JAVA互调的过程中，保证调用都是BaseApplication.instance
+        // 这样写之后就会被编译成public static BaseApplication instance
         @JvmStatic
         lateinit var instance: BaseApplication
         private set

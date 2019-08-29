@@ -12,7 +12,14 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-
+        <Button
+                android:id="@+id/bt_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/array_linked_list"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

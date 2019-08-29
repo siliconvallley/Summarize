@@ -12,6 +12,9 @@
             android:id="@+id/menu_java"
             android:title="@string/menu_java"/>
     <item
+            android:id="@+id/menu_kotlin"
+            android:title="@string/menu_kotlin"/>
+    <item
             android:id="@+id/menu_algorithm"
             android:title="@string/menu_algorithm"/>
     <item

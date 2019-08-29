@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+        <Button
+                android:id="@+id/bt_coroutines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="协程"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/bt_anr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ANR"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
