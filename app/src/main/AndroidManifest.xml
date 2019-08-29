@@ -12,6 +12,14 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.algorithm.AlgorithmActivity">
+        </activity>
+        <activity android:name=".activity.kotlin.KotlinActivity">
+        </activity>
+        <activity android:name=".activity.android.AndroidActivity">
+        </activity>
+        <activity android:name=".activity.answer.AnswerActivity">
+        </activity>
         <activity
                 android:name=".activity.MainActivity"
                 android:configChanges="orientation|screenSize|keyboardHidden"

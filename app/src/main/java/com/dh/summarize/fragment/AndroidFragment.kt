@@ -1,8 +1,12 @@
 package com.dh.summarize.fragment
 
+import android.os.Bundle
 import android.view.View
 import com.dh.summarize.R
+import com.dh.summarize.activity.android.AndroidActivity
 import com.dh.summarize.base.BaseFragment
+import com.dh.summarize.global.Constants
+import kotlinx.android.synthetic.main.android_fragment_layout.*
 
 class AndroidFragment : BaseFragment() {
     companion object {
@@ -19,8 +23,20 @@ class AndroidFragment : BaseFragment() {
     }
 
     override fun initListener() {
+        bt_component.setOnClickListener(onClickListener)
     }
 
     override fun initData() {
+
+    }
+
+    private val onClickListener = View.OnClickListener {
+        val bundle = Bundle()
+        when (it.id) {
+            R.id.bt_component -> {
+                bundle.putString(Constants.KEY_MARK, Constants.ANDROID_FOUR_COMPONENT)
+                startActivity(mActivity, AndroidActivity::class.java, bundle)
+            }
+        }
     }
 }

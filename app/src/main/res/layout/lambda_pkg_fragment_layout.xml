@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+    <Button
+            android:id="@+id/bt_param"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试lambda默认参数个数"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/item_bg_pressed"/>
+
+    <Button
+            android:id="@+id/bt_param_deal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="解决lambda默认参数最多个数问题"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/item_bg_pressed"/>
+
+</LinearLayout>

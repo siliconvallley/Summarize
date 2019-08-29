@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="数组"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+
+        <Button
+                android:id="@+id/bt_array_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="增加"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/bt_array_del"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="删除"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <TextView
+                android:id="@+id/tv_array_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="链表"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+
+        <Button
+                android:id="@+id/bt_link_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="增加"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/bt_link_del"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="删除"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <TextView
+                android:id="@+id/tv_link_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"/>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

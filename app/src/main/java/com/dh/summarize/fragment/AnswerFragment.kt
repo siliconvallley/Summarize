@@ -1,8 +1,12 @@
 package com.dh.summarize.fragment
 
+import android.os.Bundle
 import android.view.View
 import com.dh.summarize.R
+import com.dh.summarize.activity.answer.AnswerActivity
 import com.dh.summarize.base.BaseFragment
+import com.dh.summarize.global.Constants
+import kotlinx.android.synthetic.main.answer_fragment_layout.*
 
 class AnswerFragment : BaseFragment() {
     companion object {
@@ -19,8 +23,19 @@ class AnswerFragment : BaseFragment() {
     }
 
     override fun initListener() {
+        bt_list.setOnClickListener(onClickListener)
     }
 
     override fun initData() {
+    }
+
+    private val onClickListener = View.OnClickListener {
+        val bundle = Bundle()
+        when (it.id) {
+            R.id.bt_list -> {
+                bundle.putString(Constants.KEY_MARK, Constants.ANSWER_VALUE_LIST)
+            }
+        }
+        startActivity(mActivity, AnswerActivity::class.java, bundle)
     }
 }

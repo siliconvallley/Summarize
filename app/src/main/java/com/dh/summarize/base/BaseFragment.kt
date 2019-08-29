@@ -2,6 +2,7 @@ package com.dh.summarize.base
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -75,5 +76,35 @@ abstract class BaseFragment : Fragment() {
     fun finish(activity: Activity) {
         //KeyboardUtils.hideSoftInput(activity)
         activity.finish()
+    }
+
+
+    fun startActivity(activity: Activity, clazz: Class<*>) {
+        val intent = Intent(activity, clazz)
+        startActivity(intent)
+    }
+
+    fun startActivity(activity: Activity, clazz: Class<*>, bundle: Bundle) {
+        val intent = Intent(activity, clazz)
+        intent.putExtras(bundle)
+        startActivity(intent)
+    }
+
+    fun startActivityForResult(activity: Activity, clazz: Class<*>, requestCode: Int) {
+        val intent = Intent(activity, clazz)
+        startActivityForResult(intent, requestCode)
+    }
+
+    fun startActivityForResult(activity: Activity, clazz: Class<*>, requestCode: Int, bundle: Bundle) {
+        val intent = Intent(activity, clazz)
+        intent.putExtras(bundle)
+        startActivityForResult(intent, requestCode)
+    }
+
+    fun setResult(activity: Activity, bundle: Bundle) {
+        val intent = Intent()
+        intent.putExtras(bundle)
+        activity.setResult(Activity.RESULT_OK, intent)
+        finish(activity)
     }
 }

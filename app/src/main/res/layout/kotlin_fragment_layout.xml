@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+        <Button
+                android:id="@+id/bt_lambda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lambda"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/bt_dynamic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dynamic_proxy"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/bt_high"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/advanced_features"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/bt_grammar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/grammar_features"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/bt_extend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/extended_library"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

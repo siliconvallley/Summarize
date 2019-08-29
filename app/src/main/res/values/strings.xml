@@ -2,10 +2,29 @@
     <string name="app_name">Summarize</string>
     <string name="menu_android">Android</string>
     <string name="menu_java">Java</string>
+    <string name="menu_kotlin">Kotlin</string>
     <string name="menu_algorithm">Algorithm</string>
     <string name="menu_subtitle">其他</string>
     <string name="menu_answer">开发中的问题</string>
     <string name="open">开启</string>
     <string name="close">关闭</string>
     <string name="down_exit">再按一次退出程序</string>
+
+    <!--Android-->
+    <string name="four_component">Android四大组件</string>
+
+    <!--Java-->
+
+    <!--Kotlin-->
+    <string name="lambda">Lambda闭包</string>
+    <string name="dynamic_proxy">Kotlin动态代理</string>
+    <string name="advanced_features">Kotlin高级特性</string>
+    <string name="grammar_features">Kotlin语法特性</string>
+    <string name="extended_library">Kotlin扩展库</string>
+
+    <!--Algorithm-->
+    <string name="array_struct">基本数据结构</string>
+
+    <!--其他-->
+    <string name="array_linked_list">ArrayList和LinkedList遍历</string>
 </resources>

@@ -13,10 +13,10 @@
             android:padding="10dp">
 
         <Button
-                android:id="@+id/bt_ktx"
+                android:id="@+id/bt_component"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ktx"
+                android:text="@string/four_component"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:background="@drawable/item_bg_pressed"/>
