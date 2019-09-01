@@ -24,6 +24,7 @@ class AndroidFragment : BaseFragment() {
 
     override fun initListener() {
         bt_component.setOnClickListener(onClickListener)
+        btTransVal.setOnClickListener(onClickListener)
     }
 
     override fun initData() {
@@ -35,8 +36,11 @@ class AndroidFragment : BaseFragment() {
         when (it.id) {
             R.id.bt_component -> {
                 bundle.putString(Constants.KEY_MARK, Constants.ANDROID_FOUR_COMPONENT)
-                startActivity(mActivity, AndroidActivity::class.java, bundle)
+            }
+            R.id.btTransVal -> {
+                bundle.putString(Constants.KEY_MARK, Constants.TRANSFER_VALUE)
             }
         }
+        startActivity(mActivity, AndroidActivity::class.java, bundle)
     }
 }

@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.dh.summarize.activity.android.AndroidActivity
+import com.dh.utils_library.fragment.FunctionsManager
 
 /**
  * @author : 86351
@@ -17,10 +19,28 @@ import androidx.fragment.app.Fragment
  */
 abstract class BaseFragment : Fragment() {
     protected lateinit var mActivity: Activity
+    private lateinit var androidActivity: AndroidActivity
+
+    protected lateinit var functionsManager: FunctionsManager
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
         mActivity = context as Activity
+        bindInterface(context)
+    }
+
+    private fun bindInterface(context: Activity) {
+        when (context) {
+            is AndroidActivity -> {
+                androidActivity = context
+                // 绑定接口调用
+                androidActivity.addFunctionForFragment(tag)
+            }
+        }
+    }
+
+    fun setFunctionManager(functionsManager: FunctionsManager) {
+        this.functionsManager = functionsManager
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +48,11 @@ abstract class BaseFragment : Fragment() {
         initParams()
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(getLayoutId(), null)
     }
 
@@ -95,7 +119,12 @@ abstract class BaseFragment : Fragment() {
         startActivityForResult(intent, requestCode)
     }
 
-    fun startActivityForResult(activity: Activity, clazz: Class<*>, requestCode: Int, bundle: Bundle) {
+    fun startActivityForResult(
+        activity: Activity,
+        clazz: Class<*>,
+        requestCode: Int,
+        bundle: Bundle
+    ) {
         val intent = Intent(activity, clazz)
         intent.putExtras(bundle)
         startActivityForResult(intent, requestCode)
