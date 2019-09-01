@@ -12,6 +12,7 @@
 
     <!--Android-->
     <string name="four_component">Android四大组件</string>
+    <string name="transfer_value">Fragment->Activity->Fragment</string>
 
     <!--Java-->
 

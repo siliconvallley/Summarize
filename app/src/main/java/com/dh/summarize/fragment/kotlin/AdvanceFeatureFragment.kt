@@ -241,7 +241,8 @@ class AdvanceFeatureFragment : BaseFragment(), View.OnClickListener {
         // with比较特殊，它不是以扩展函数存在的，而是一个顶级函数
         // Android中可以使用with对各个View赋值
         with(user) {
-            user.name = "王五"
+            //user.name = "王五"
+            this.name = "张三"
         }
         tv_content.text = builder.toString()
     }
