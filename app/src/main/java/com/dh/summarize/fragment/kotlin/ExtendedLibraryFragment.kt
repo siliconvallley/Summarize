@@ -13,7 +13,13 @@ import kotlinx.coroutines.*
  *    1、可控制：协程能做到可被控制的发起子任务
  *    2、轻量级：协程非常小，占用资源比线程还少
  *    3、语法糖：使多任务或多线程切换不再使用回调语法
- * 2、
+ * 2、特殊的启动协程的方式
+ *    1、
+ *
+ * suspend 在kotlin中被suspend关键字的修饰的函数，是一个协程函数，
+ *         被suspend修饰的函数只能被suspend修饰的函数（或lambda）调用。
+ *         被suspend修饰的函数（或lambda），被编译后会多出一个参数类型Continuation
+ *         协程的异步调用本质上是一次回调
  */
 class ExtendedLibraryFragment : BaseFragment(), View.OnClickListener {
 
@@ -79,6 +85,9 @@ class ExtendedLibraryFragment : BaseFragment(), View.OnClickListener {
         LogUtils.d(TAG, "线程结束...")
     }
 
+    fun test(){
+
+    }
 
     /**
      * context: CoroutineContext 协程与协程之间切换传递参数的功能

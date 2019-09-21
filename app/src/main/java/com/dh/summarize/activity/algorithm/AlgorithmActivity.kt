@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import com.dh.summarize.R
 import com.dh.summarize.base.BaseActivity
 import com.dh.summarize.fragment.algorithm.ArrayFragment
+import com.dh.summarize.fragment.algorithm.TestAlgorithmFragment
 import com.dh.summarize.global.Constants
 import kotlinx.android.synthetic.main.activity_algorithm.*
 
@@ -37,6 +38,9 @@ class AlgorithmActivity : BaseActivity() {
         when (fragmentMark) {
             Constants.AL_ARRAY -> {
                 replaceFragment(ArrayFragment.getInstance())
+            }
+            Constants.AL_TEST_1 -> {
+                replaceFragment(TestAlgorithmFragment.getInstance())
             }
         }
     }
