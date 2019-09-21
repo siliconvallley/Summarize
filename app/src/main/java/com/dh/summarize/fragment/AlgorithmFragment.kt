@@ -25,6 +25,7 @@ class AlgorithmFragment : BaseFragment(), View.OnClickListener {
 
     override fun initListener() {
         bt_array.setOnClickListener(this)
+        btTest.setOnClickListener(this)
     }
 
     override fun initData() {
@@ -35,6 +36,9 @@ class AlgorithmFragment : BaseFragment(), View.OnClickListener {
         when (v?.id) {
             R.id.bt_array -> {
                 bundle.putString(Constants.KEY_MARK, Constants.AL_ARRAY)
+            }
+            R.id.btTest -> {
+                bundle.putString(Constants.KEY_MARK, Constants.AL_TEST_1)
             }
         }
         startActivity(mActivity, AlgorithmActivity::class.java, bundle)

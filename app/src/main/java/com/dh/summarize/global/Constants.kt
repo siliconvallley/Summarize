@@ -19,6 +19,7 @@ object Constants {
 
     // algorithm
     const val AL_ARRAY = "al_array"
+    const val AL_TEST_1 = "al_test_1"
 
     // Answer
     const val ANSWER_VALUE_LIST = "value_list"

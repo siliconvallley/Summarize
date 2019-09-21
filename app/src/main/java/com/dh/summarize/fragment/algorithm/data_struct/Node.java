@@ -1,5 +1,10 @@
 package com.dh.summarize.fragment.algorithm.data_struct;
 
+import android.util.SparseIntArray;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Node {
     public int data;
     public Node next;
@@ -25,5 +30,18 @@ public class Node {
 
     public void setNext(Node next) {
         this.next = next;
+    }*/
+
+    /*public int[] twoSum(int[] nums, int target) {
+        //SparseIntArray array = new SparseIntArray();
+        Map<Integer, Integer> map = new HashMap<>(12);
+        for (int i = 0; i < nums.length; i++) {
+            int result = target - nums[i];
+            if (map.containsKey(result)) {
+                return new int[]{i, map.get(result)};
+            }
+            map.put(nums[i], i);
+        }
+        return new int[]{};
     }*/
 }
