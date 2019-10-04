@@ -6,6 +6,7 @@ import com.dh.summarize.R
 import com.dh.summarize.base.BaseFragment
 import com.dh.summarize.fragment.kotlin.entity.OperatorBean
 import com.dh.summarize.fragment.kotlin.entity.UserBean
+import com.dh.summarize.fragment.kotlin.example.name
 import com.dh.utils_library.utils.LogUtils
 import kotlinx.android.synthetic.main.advance_feature_fragment_layout.*
 
@@ -158,6 +159,7 @@ class AdvanceFeatureFragment : BaseFragment(), View.OnClickListener {
         tv_content.text = (5 vs 6).toString()
     }
 
+
     /**
      * 中缀表达式
      */
@@ -196,9 +198,11 @@ class AdvanceFeatureFragment : BaseFragment(), View.OnClickListener {
         val builder = StringBuilder()
         // let和run都会返回lambda闭包的执行结果，区别在于let有闭包参数，run没有闭包参数
         val user = UserBean("张三")
+        // let有闭包参数，比如user调用了let，闭包参数就是user
         val letName = user.let { userBean ->
             "let:${userBean.name}"
         }
+        // 而run是没有闭包参数，比如user调用了run，this就是用来指代调用者user
         val runName = user.run {
             "run:${this.name}"
         }
@@ -216,6 +220,7 @@ class AdvanceFeatureFragment : BaseFragment(), View.OnClickListener {
         }.apply {
             builder.append("==>apply:${this.name}\n")
         }.name = "李斯"
+
         user.also {
             builder.append("also:${it.name}")
         }.apply {
@@ -355,6 +360,25 @@ class AdvanceFeatureFragment : BaseFragment(), View.OnClickListener {
             builder.append("下标:$index").append("==>值:$value").append(" ")
         }
         tv_content.text = builder.toString()
+
+        val list: MutableList<OperatorBean> = arrayListOf()
+        list.add(OperatorBean("张三", 20))
+        list.add(OperatorBean("李斯", 40))
+        for ((name, age) in list) {
+
+        }
+        for ((operatorBean, i) in list.withIndex()) {
+
+        }
+        for (operatorBean in list) {
+
+        }
+        for (i in list.indices) {
+
+        }
+        list.forEach {
+
+        }
     }
 
     private interface TestOutput {
