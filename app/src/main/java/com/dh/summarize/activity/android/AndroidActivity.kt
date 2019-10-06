@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import com.dh.summarize.R
 import com.dh.summarize.base.BaseActivity
 import com.dh.summarize.base.BaseFragment
+import com.dh.summarize.fragment.android.PaintFragment
 import com.dh.summarize.fragment.android.TransValFragment
 import com.dh.summarize.global.Constants
 import com.dh.utils_library.fragment.*
@@ -42,6 +43,7 @@ class AndroidActivity : BaseActivity() {
             Constants.TRANSFER_VALUE -> {
                 replaceFragment(TransValFragment.getInstance())
             }
+            Constants.TEST_PIANT -> replaceFragment(PaintFragment.getInstance())
         }
     }
 
