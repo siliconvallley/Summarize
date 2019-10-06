@@ -25,6 +25,7 @@ class AndroidFragment : BaseFragment() {
     override fun initListener() {
         bt_component.setOnClickListener(onClickListener)
         btTransVal.setOnClickListener(onClickListener)
+        btPaint.setOnClickListener(onClickListener)
     }
 
     override fun initData() {
@@ -33,14 +34,13 @@ class AndroidFragment : BaseFragment() {
 
     private val onClickListener = View.OnClickListener {
         val bundle = Bundle()
+        var value = ""
         when (it.id) {
-            R.id.bt_component -> {
-                bundle.putString(Constants.KEY_MARK, Constants.ANDROID_FOUR_COMPONENT)
-            }
-            R.id.btTransVal -> {
-                bundle.putString(Constants.KEY_MARK, Constants.TRANSFER_VALUE)
-            }
+            R.id.bt_component -> value = Constants.ANDROID_FOUR_COMPONENT
+            R.id.btTransVal -> value = Constants.TRANSFER_VALUE
+            R.id.btPaint -> value = Constants.TEST_PIANT
         }
+        bundle.putString(Constants.KEY_MARK, value)
         startActivity(mActivity, AndroidActivity::class.java, bundle)
     }
 }
