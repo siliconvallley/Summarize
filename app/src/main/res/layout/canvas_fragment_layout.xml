@@ -1,44 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-    <com.dh.summarize.view.PaintView
+    <com.dh.summarize.view.CanvasView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"/>
 
-    <com.dh.summarize.view.PaintView2
+    <com.dh.summarize.view.CanvasView1
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"/>
 
-    <com.dh.summarize.view.PaintView3
+    <com.dh.summarize.view.CanvasView2
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"/>
 
-    <com.dh.summarize.view.PaintView4
+    <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="gone"/>
+            android:src="@mipmap/content"
+            android:scaleType="centerCrop"/>
 
-    <com.dh.summarize.view.PaintView5
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"/>
-
-    <com.dh.summarize.view.PaintView6
+    <com.dh.summarize.view.CanvasView3
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="visible"/>
 
-    <com.dh.summarize.view.PaintView7
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone"/>
-
-</LinearLayout>
+</RelativeLayout>

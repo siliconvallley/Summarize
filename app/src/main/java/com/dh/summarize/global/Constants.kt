@@ -7,7 +7,10 @@ object Constants {
     // Android
     const val ANDROID_FOUR_COMPONENT = "four_component"
     const val TRANSFER_VALUE = "fragment_to_fragment"
-    const val TEST_PIANT = "test_paint"
+    const val TEST_PAINT = "test_paint"
+    const val TEST_CANVAS = "test_canvas"
+    const val TEST_PATH = "test_path"
+    const val SCREEN_ADAPTER = "screen_adapter"
 
     // Java
 

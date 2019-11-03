@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.dh.summarize.utils.DensityUtils
 import java.lang.ref.WeakReference
 import kotlin.reflect.KClass
 
@@ -19,6 +20,8 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // 屏幕适配
+        // DensityUtils.setCustomDensity(this.application, this)
         // 沉浸式
         //StatusBarHelper.translucent(this)
         // 修改状态栏字体颜色
