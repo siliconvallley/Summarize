@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PathView2">
+        <attr name="bubble_radius" format="dimension" />
+        <attr name="bubble_color" format="color" />
+        <attr name="bubble_text" format="string" />
+        <attr name="bubble_textSize" format="dimension" />
+        <attr name="bubble_textColor" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PercentRelativeLayout">
+        <attr name="widthPercent" format="float" />
+        <attr name="heightPercent" format="float" />
+        <attr name="marginLeftPercent" format="float" />
+        <attr name="marginRightPercent" format="float" />
+        <attr name="marginTopPercent" format="float" />
+        <attr name="marginBottomPercent" format="float" />
+    </declare-styleable>
+
+    <!--密码输入框-->
+    <declare-styleable name="PassWordView">
+        <!--密码位数-->
+        <attr name="password_number" format="integer" />
+        <!--显示密码圆点的半径-->
+        <attr name="password_point_radius" format="dimension" />
+        <!--密码圆点颜色-->
+        <attr name="password_point_color" format="color" />
+        <!--密码框分隔线尺寸-->
+        <attr name="password_divider_size" format="dimension" />
+        <!--密码分隔线颜色-->
+        <attr name="password_divider_color" format="color" />
+        <!--密码框边框颜色-->
+        <attr name="password_stroke_color" format="color" />
+        <!--密码框边框宽度-->
+        <attr name="password_stroke_size" format="dimension" />
+        <!--密码框的圆角尺寸-->
+        <attr name="password_corner" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="PasswordView">
+        <!--密码位数-->
+        <attr name="pass_num" format="integer"/>
+        <!--显示密码圆点的半径-->
+        <attr name="pass_point_radius" format="dimension"/>
+        <!--密码圆点颜色-->
+        <attr name="pass_point_color" format="color"/>
+        <!--密码框边框宽度-->
+        <attr name="pass_stroke" format="dimension"/>
+        <!--密码框边框颜色-->
+        <attr name="pass_stroke_color" format="color"/>
+        <!--密码框的圆角尺寸-->
+        <attr name="pass_corner" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="MotionEventView3">
+        <attr name="max_scale" format="float" />
+        <attr name="min_scale" format="float" />
+        <attr name="revert_duration" format="integer" />
+        <attr name="open_scale_revert" format="boolean"/>
+        <attr name="open_rotate_revert" format="boolean"/>
+        <attr name="open_translate_revert" format="boolean"/>
+        <attr name="open_animator" format="boolean" />
+        <attr name="scale_center" format="enum">
+            <enum name="img_center" value="0" />
+            <enum name="finger_center" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CustomImageView">
+        <attr name="min_scale_factor" format="float"/>
+        <attr name="max_scale_factor" format="float"/>
+        <attr name="can_back_translate" format="boolean"/>
+        <attr name="can_back_rotate" format="boolean"/>
+        <attr name="can_back_scale" format="boolean"/>
+        <attr name="animator_time" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="MotionEventView2">
+        <attr name="maxScale" format="float"/>
+        <attr name="minScale" format="float"/>
+    </declare-styleable>
+</resources>

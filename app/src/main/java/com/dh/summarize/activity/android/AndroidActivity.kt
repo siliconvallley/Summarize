@@ -4,9 +4,9 @@ import androidx.fragment.app.Fragment
 import com.dh.summarize.R
 import com.dh.summarize.base.BaseActivity
 import com.dh.summarize.base.BaseFragment
-import com.dh.summarize.fragment.android.PaintFragment
-import com.dh.summarize.fragment.android.TransValFragment
+import com.dh.summarize.fragment.android.*
 import com.dh.summarize.global.Constants
+import com.dh.summarize.utils.DensityUtils
 import com.dh.utils_library.fragment.*
 import com.dh.utils_library.utils.LogUtils
 import kotlinx.android.synthetic.main.activity_android.*
@@ -18,6 +18,7 @@ class AndroidActivity : BaseActivity() {
     private lateinit var functionsManager: FunctionsManager
 
     override fun getLayoutId(): Int {
+        DensityUtils.setCustomDensity(this.application, this)
         return R.layout.activity_android
     }
 
@@ -43,7 +44,10 @@ class AndroidActivity : BaseActivity() {
             Constants.TRANSFER_VALUE -> {
                 replaceFragment(TransValFragment.getInstance())
             }
-            Constants.TEST_PIANT -> replaceFragment(PaintFragment.getInstance())
+            Constants.TEST_PAINT -> replaceFragment(PaintFragment.getInstance())
+            Constants.TEST_CANVAS -> replaceFragment(CanvasFragment.getInstance())
+            Constants.TEST_PATH -> replaceFragment(PathFragment.getInstance())
+            Constants.SCREEN_ADAPTER -> replaceFragment(ScreenAdapterFragment.getInstance())
         }
     }
 

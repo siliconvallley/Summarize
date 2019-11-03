@@ -10,14 +10,29 @@ Android学习总结，准备涉及kotlin、JAVA、算法，平时工作中遇到
 3、View绘制流程  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[View绘制流程博客地址](https://mp.csdn.net/mdeditor/102077612#)  
 4、自定义View画笔（Paint）基础介绍  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Paint基础博客地址](https://mp.csdn.net/mdeditor/102106519#)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Paint基础博客地址](https://mp.csdn.net/mdeditor/102106519#)  
+5、自定义View画布（Canvas）基础介绍  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Canvas基础](https://blog.csdn.net/u013855006/article/details/102264673)  
+6、自定义View之Path基础  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Path基础](https://blog.csdn.net/u013855006/article/details/102473276)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PathMeasure介绍](https://blog.csdn.net/u013855006/article/details/102617096)  
+7、Android屏幕适配  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Android屏幕适配各种方案](https://blog.csdn.net/u013855006/article/details/102773870)
+
+---
 
 二、Java
 
+---
+
 三、算法
+
+---
 
 四、Kotlin  
 Kotlin的使用，博客持续更新中  
 [Kotlin使用，博客地址](https://mp.csdn.net/mdeditor/101625538#)
+
+---
 
 五、工作中遇到的问题总结

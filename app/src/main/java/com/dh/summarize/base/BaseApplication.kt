@@ -4,6 +4,7 @@ import android.os.StrictMode
 import androidx.multidex.MultiDex
 import androidx.multidex.MultiDexApplication
 import com.dh.summarize.BuildConfig
+import com.dh.summarize.utils.screen.UIUtils
 import leakcanary.AppWatcher
 import leakcanary.LeakCanary
 
@@ -69,5 +70,7 @@ class BaseApplication : MultiDexApplication() {
         //LeakCanary.config = LeakCanary.config.copy(retainedVisibleThreshold = 3)
         // 2、分包
         MultiDex.install(instance)
+        // 3、初始化屏幕适配工具
+        UIUtils.getInstance(instance)
     }
 }

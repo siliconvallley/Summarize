@@ -41,6 +41,56 @@
                 android:textColor="@color/white"
                 android:background="@drawable/item_bg_pressed"/>
 
+        <Button
+                android:id="@+id/btCanvas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Canvas基础"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/btPath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Path基础"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/btScreenAdapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="屏幕适配（像素适配、百分比适配）"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/btScreenAdapter1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="刘海屏适配"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/btTest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="其他测试"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
