@@ -11,6 +11,9 @@ object Constants {
     const val TEST_CANVAS = "test_canvas"
     const val TEST_PATH = "test_path"
     const val SCREEN_ADAPTER = "screen_adapter"
+    const val BOTTOM_NAVIGATION = "bottom_navigation"
+    const val MATERIAL_DESIGN = "material_design"
+    const val RECYCLER_TOP_STOP = "recycler_top_stop"
 
     // Java
 

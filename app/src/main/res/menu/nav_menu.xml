@@ -5,6 +5,22 @@
                 android:id="@+id/menu_android"
                 android:title="@string/menu_android"/>
     </group>-->
+    <!--android:checkableBehavior="single" 表示这组菜单可以进行单选操作-->
+    <!--<group android:checkableBehavior="single">
+        <item
+                android:id="@+id/menu_android"
+                android:title="@string/menu_android"/>
+        <item
+                android:id="@+id/menu_java"
+                android:title="@string/menu_java"/>
+        <item
+                android:id="@+id/menu_kotlin"
+                android:title="@string/menu_kotlin"/>
+        <item
+                android:id="@+id/menu_algorithm"
+                android:title="@string/menu_algorithm"/>
+    </group>-->
+
     <item
             android:id="@+id/menu_android"
             android:title="@string/menu_android"/>
@@ -17,6 +33,7 @@
     <item
             android:id="@+id/menu_algorithm"
             android:title="@string/menu_algorithm"/>
+
     <item
             android:title="@string/menu_subtitle">
         <menu>

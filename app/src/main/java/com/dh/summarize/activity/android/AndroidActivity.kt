@@ -1,5 +1,6 @@
 package com.dh.summarize.activity.android
 
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.dh.summarize.R
 import com.dh.summarize.base.BaseActivity
@@ -48,6 +49,9 @@ class AndroidActivity : BaseActivity() {
             Constants.TEST_CANVAS -> replaceFragment(CanvasFragment.getInstance())
             Constants.TEST_PATH -> replaceFragment(PathFragment.getInstance())
             Constants.SCREEN_ADAPTER -> replaceFragment(ScreenAdapterFragment.getInstance())
+            Constants.BOTTOM_NAVIGATION -> replaceFragment(BottomNavigationFragment.getInstance())
+            Constants.MATERIAL_DESIGN -> replaceFragment(MaterialDesignFragment.getInstance())
+            Constants.RECYCLER_TOP_STOP -> replaceFragment(RecyclerTopStopFragment.getInstance())
         }
     }
 
@@ -94,5 +98,9 @@ class AndroidActivity : BaseActivity() {
     override fun onDestroy() {
         super.onDestroy()
         functionsManager.removeAll()
+    }
+
+    fun getToolBar(): Toolbar {
+        return tool_bar
     }
 }

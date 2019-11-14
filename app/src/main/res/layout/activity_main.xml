@@ -17,7 +17,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                app:titleTextColor="@color/white"/>
+                app:titleTextColor="@color/white"
+                />
+
+        <!-- 使用popupTheme是为了兼容5.0以下的系统-->
+        <!--<androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:logo="@mipmap/ic_launcher"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:subtitle="副标题"
+                app:subtitleTextColor="@color/white"
+                app:title="标题"
+                app:titleTextColor="@color/white"/>-->
 
         <!--app:layout_scrollFlags="scroll|enterAlways"-->
     </com.google.android.material.appbar.AppBarLayout>

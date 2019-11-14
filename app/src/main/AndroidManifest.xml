@@ -12,12 +12,14 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.android.ImmersiveActivity"></activity>
         <activity android:name=".activity.android.TestAndroidActivity" />
         <activity android:name=".activity.android.ShapedScreenActivity" />
         <activity android:name=".activity.algorithm.AlgorithmActivity" />
         <activity android:name=".activity.kotlin.KotlinActivity" />
         <activity android:name=".activity.android.AndroidActivity" />
         <activity android:name=".activity.answer.AnswerActivity" />
+        <activity android:name=".activity.android.MovieDetailActivity" />
         <activity
                 android:name=".activity.MainActivity"
                 android:configChanges="orientation|screenSize|keyboardHidden"

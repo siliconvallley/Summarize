@@ -91,6 +91,46 @@
                 android:textColor="@color/white"
                 android:background="@drawable/item_bg_pressed"/>
 
+        <Button
+                android:id="@+id/btBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BottomNavigationView"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/btMaterial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Material Design综合使用"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/btCusRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RecyclerView实现顶部悬停"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
+        <Button
+                android:id="@+id/btImm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="沉浸式"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/item_bg_pressed"/>
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

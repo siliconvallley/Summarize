@@ -13,6 +13,9 @@
     <!--Android-->
     <string name="four_component">Android四大组件</string>
     <string name="transfer_value">Fragment->Activity->Fragment</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
     <!--Java-->
 
