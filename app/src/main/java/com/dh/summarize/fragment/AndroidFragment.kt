@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.dh.summarize.R
 import com.dh.summarize.activity.android.AndroidActivity
+import com.dh.summarize.activity.android.ImmersiveActivity
 import com.dh.summarize.activity.android.ShapedScreenActivity
 import com.dh.summarize.activity.android.TestAndroidActivity
 import com.dh.summarize.base.BaseFragment
@@ -37,6 +38,12 @@ class AndroidFragment : BaseFragment() {
         btTest.setOnClickListener {
             startActivity(mActivity, TestAndroidActivity::class.java)
         }
+        btBottom.setOnClickListener(onClickListener)
+        btMaterial.setOnClickListener(onClickListener)
+        btCusRecycler.setOnClickListener(onClickListener)
+        btImm.setOnClickListener {
+            startActivity(mActivity, ImmersiveActivity::class.java)
+        }
     }
 
     override fun initData() {
@@ -57,6 +64,9 @@ class AndroidFragment : BaseFragment() {
             R.id.btCanvas -> Constants.TEST_CANVAS
             R.id.btPath -> Constants.TEST_PATH
             R.id.btScreenAdapter -> Constants.SCREEN_ADAPTER
+            R.id.btBottom -> Constants.BOTTOM_NAVIGATION
+            R.id.btMaterial -> Constants.MATERIAL_DESIGN
+            R.id.btCusRecycler -> Constants.RECYCLER_TOP_STOP
             else -> ""
         }
         bundle.putString(Constants.KEY_MARK, value)

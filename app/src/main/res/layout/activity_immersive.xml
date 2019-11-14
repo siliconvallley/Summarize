@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.android.ImmersiveActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@mipmap/back"
+            app:title="沉浸式"
+            app:titleTextColor="@color/white" />
+
+    <!--app:cardBackgroundColor="@color/colorPrimary"  设置cardView背景色 -->
+    <!--app:cardPreventCornerOverlap="false" 取消Lollipop以下版本的padding -->
+    <!--app:cardUseCompatPadding="true" 为 Lollipop 及其以上版本增加一个阴影padding内边距-->
+    <!--app:cardCornerRadius="8dp" 设置cardView圆角效果-->
+    <!--app:cardElevation="10dp" 设置cardView Z轴阴影大小-->
+    <!--app:cardMaxElevation="6dp" 设置cardView Z轴最大阴影-->
+    <!--app:contentPadding="10dp" 设置内容的内边距-->
+    <!--app:contentPaddingBottom="12dp" 设置内容的底部内边距-->
+    <!--app:contentPaddingLeft="12dp" 设置内容的左边内边距-->
+    <!--app:contentPaddingRight="12dp" 设置内容的右边内边距-->
+    <!--app:contentPaddingTop="12dp" 设置内容的顶部内边距-->
+    <!--android:foreground="?android:attr/selectableItemBackground"-->
+    <!--android:foreground="?android:attr/actionBarItemBackground"-->
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar"
+            app:cardUseCompatPadding="true"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello World"
+                android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

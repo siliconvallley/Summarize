@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.KeyEvent
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -19,6 +21,11 @@ import com.dh.summarize.fragment.*
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * @author 86351
+ * @date 2019/11/6
+ * @description DrawerLayout，ToolBar，NavigationView的结合使用
+ */
 class MainActivity : BaseActivity() {
     companion object {
         private const val INTERVAL_TIME: Long = 2000
@@ -45,11 +52,21 @@ class MainActivity : BaseActivity() {
         setSupportActionBar(tool_bar)
         val actionBar = actionBar
         if (actionBar != null) {
+            // 设置ToolBar home按钮可点击
             actionBar.setHomeButtonEnabled(true)
+            // 设置显示ToolBar home键图标
             actionBar.setDisplayHomeAsUpEnabled(true)
+            // 设置ToolBar  home键图标
+            //actionBar.setHomeAsUpIndicator(R.mipmap.ic_launcher)
         }
         val drawerToggle =
-            object : ActionBarDrawerToggle(this, drawer_layout, tool_bar, R.string.open, R.string.close) {
+            object : ActionBarDrawerToggle(
+                this,
+                drawer_layout,
+                tool_bar,
+                R.string.open,
+                R.string.close
+            ) {
                 override fun onDrawerStateChanged(newState: Int) {
                     super.onDrawerStateChanged(newState)
                 }
@@ -71,6 +88,7 @@ class MainActivity : BaseActivity() {
     }
 
     override fun initListener() {
+        // NavigationView的监听
         nav_view.setNavigationItemSelectedListener(navItemSelectListener)
         //drawer_layout.addDrawerListener(drawerListener)
     }
@@ -95,6 +113,9 @@ class MainActivity : BaseActivity() {
         //tool_bar.title = getString(R.string.menu_android)
     }
 
+    /**
+     * NavigationView的监听
+     */
     private val navItemSelectListener =
         NavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -115,10 +136,16 @@ class MainActivity : BaseActivity() {
                 }
             }
             tool_bar.title = item.title.toString()
+            // 打开侧滑菜单
+            //drawer_layout.openDrawer(GravityCompat.START)
+            // 关闭侧滑菜单
             drawer_layout.closeDrawer(GravityCompat.START)
             true
         }
 
+    /**
+     * DrawerLayout监听
+     */
     private val drawerListener = object : DrawerLayout.DrawerListener {
         override fun onDrawerStateChanged(newState: Int) {
         }
@@ -135,19 +162,30 @@ class MainActivity : BaseActivity() {
 
     }
 
+    /**
+     * Fragment的切换
+     */
     private fun selectFragment(index: Int) {
         // 判断是否是相同下标，避免重复点击
         if (preIndex == index) return
         // 开启事物
         val transaction = supportFragmentManager.beginTransaction()
         if (preIndex == -1) {
-            transaction.add(R.id.fl_content, fragments[index], fragments[index].javaClass.simpleName)
+            transaction.add(
+                R.id.fl_content,
+                fragments[index],
+                fragments[index].javaClass.simpleName
+            )
         } else {
             // 隐藏前一个Fragment
             transaction.hide(fragments[preIndex])
             // 判断当前Fragment是否被添加过
             if (!fragments[index].isAdded) {
-                transaction.add(R.id.fl_content, fragments[index], fragments[index].javaClass.simpleName)
+                transaction.add(
+                    R.id.fl_content,
+                    fragments[index],
+                    fragments[index].javaClass.simpleName
+                )
             } else {
                 transaction.show(fragments[index])
             }
@@ -184,5 +222,26 @@ class MainActivity : BaseActivity() {
             }
         }
         return super.onKeyDown(keyCode, event)
+    }
+
+    /**
+     * 创建ToolBar的菜单
+     */
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.test_toolbar_menu, menu)
+        return true
+    }
+
+    /**
+     * 菜单的事件监听
+     */
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.menu_android -> {
+
+            }
+            R.id.menu_java -> {}
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
