@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Summarize.iml" filepath="$PROJECT_DIR$/.idea/Summarize.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/http/http.iml" filepath="$PROJECT_DIR$/http/http.iml" />
-      <module fileurl="file://$PROJECT_DIR$/utils_library/utils_library.iml" filepath="$PROJECT_DIR$/utils_library/utils_library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Summarize.iml" filepath="$PROJECT_DIR$/.idea/Summarize.iml" group="Summarize" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Summarize/app" />
+      <module fileurl="file://$PROJECT_DIR$/http/http.iml" filepath="$PROJECT_DIR$/http/http.iml" group="Summarize/http" />
+      <module fileurl="file://$PROJECT_DIR$/utils_library/utils_library.iml" filepath="$PROJECT_DIR$/utils_library/utils_library.iml" group="Summarize/utils_library" />
     </modules>
   </component>
 </project>

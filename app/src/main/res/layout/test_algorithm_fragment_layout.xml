@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -16,10 +15,50 @@
                 android:id="@+id/btSum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/item_bg_pressed"
                 android:text="两数之和"
-                android:textSize="16sp"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
+
+        <Button
+                android:id="@+id/btBinary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="二进制，十进制转换"
+                android:background="@drawable/item_bg_pressed"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        <Button
+                android:id="@+id/btOrAndXor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="二进制的与、或、异或"
+                android:background="@drawable/item_bg_pressed"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        <Button
+                android:id="@+id/btMostFrequent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="找出数组中出现次数最多的元素"
+                android:background="@drawable/item_bg_pressed"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        <Button
+                android:id="@+id/btReverseLinkedList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="反转链表"
+                android:background="@drawable/item_bg_pressed"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
