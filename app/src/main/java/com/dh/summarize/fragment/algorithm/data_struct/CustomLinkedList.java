@@ -64,6 +64,7 @@ public class CustomLinkedList {
 
     /**
      * 查询
+     *
      * @param index
      * @return
      */
@@ -81,6 +82,20 @@ public class CustomLinkedList {
     public String outPut() {
         StringBuilder builder = new StringBuilder();
         Node tempNode = head;
+        while (tempNode != null) {
+            builder.append(tempNode.data).append(" ");
+            tempNode = tempNode.next;
+        }
+        return builder.toString();
+    }
+
+    public Node getNode() {
+        return head;
+    }
+
+    public String outNode(Node node) {
+        StringBuilder builder = new StringBuilder();
+        Node tempNode = node;
         while (tempNode != null) {
             builder.append(tempNode.data).append(" ");
             tempNode = tempNode.next;

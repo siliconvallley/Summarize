@@ -52,6 +52,7 @@ class AndroidActivity : BaseActivity() {
             Constants.BOTTOM_NAVIGATION -> replaceFragment(BottomNavigationFragment.getInstance())
             Constants.MATERIAL_DESIGN -> replaceFragment(MaterialDesignFragment.getInstance())
             Constants.RECYCLER_TOP_STOP -> replaceFragment(RecyclerTopStopFragment.getInstance())
+            Constants.TEST_SVG -> replaceFragment(SvgFragment.getInstance())
         }
     }
 

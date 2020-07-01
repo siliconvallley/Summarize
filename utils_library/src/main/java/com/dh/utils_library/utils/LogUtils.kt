@@ -12,10 +12,12 @@ object LogUtils {
     //private val debug:Boolean = Utils.isDebug()
     private val debug: Boolean = true
 
+    @JvmStatic
     fun v(tag: String, msg: String) {
         if (debug) Log.v("$tag==>", msg)
     }
 
+    @JvmStatic
     fun v(tag: String, msg: String, e: Throwable) {
         if (debug) Log.v("$tag==>", msg, e)
     }
@@ -25,30 +27,37 @@ object LogUtils {
         if (debug) Log.d("$tag==>", msg)
     }
 
+    @JvmStatic
     fun d(tag: String, msg: String, e: Throwable) {
         if (debug) Log.d("$tag==>", msg, e)
     }
 
+    @JvmStatic
     fun i(tag: String, msg: String) {
         if (debug) Log.i("$tag==>", msg)
     }
 
+    @JvmStatic
     fun i(tag: String, msg: String, e: Throwable) {
         if (debug) Log.i("$tag==>", msg, e)
     }
 
+    @JvmStatic
     fun w(tag: String, msg: String) {
         if (debug) Log.w("$tag==>", msg)
     }
 
+    @JvmStatic
     fun w(tag: String, msg: String, e: Throwable) {
         if (debug) Log.w("$tag==>", msg, e)
     }
 
+    @JvmStatic
     fun e(tag: String, msg: String) {
         if (debug) Log.e("$tag==>", msg)
     }
 
+    @JvmStatic
     fun e(tag: String, msg: String, e: Throwable) {
         if (debug) Log.e("$tag==>", msg, e)
     }

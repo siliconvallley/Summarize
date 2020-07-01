@@ -14,6 +14,7 @@ object Constants {
     const val BOTTOM_NAVIGATION = "bottom_navigation"
     const val MATERIAL_DESIGN = "material_design"
     const val RECYCLER_TOP_STOP = "recycler_top_stop"
+    const val TEST_SVG = "test_svg"
 
     // Java
 

@@ -25,7 +25,7 @@
                 android:id="@+id/btTest"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="测试算法一"
+                android:text="测试算法"
                 android:textSize="16sp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/white"

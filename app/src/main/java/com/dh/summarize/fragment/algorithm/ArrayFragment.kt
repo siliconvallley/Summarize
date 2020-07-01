@@ -80,6 +80,8 @@ class ArrayFragment : BaseFragment(), View.OnClickListener {
         cusLinkedList.insert(8,8)
 
         tv_link_content.text = cusLinkedList.outPut()
+
+        // tv_link_content.text = cusLinkedList.outNode(cusLinkedList.node);
     }
 
     private fun delArray() {
