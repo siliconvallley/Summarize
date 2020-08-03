@@ -83,6 +83,7 @@ public class AlgorithmUtils {
 
     /**
      * 反转链表
+     *
      * @param node
      * @return
      */
@@ -106,5 +107,36 @@ public class AlgorithmUtils {
         return preNode;
     }
 
-    
+
+    /**
+     * 判断shortStr是否包含中longStr中
+     * 先找到longStr中跟shortStr第一个字符相同的位置，
+     * 然后依次向后匹配
+     *
+     * @param longStr
+     * @param shortStr
+     * @return
+     */
+    public boolean matchStr(String longStr, String shortStr) {
+        if (shortStr.length() > longStr.length()) {
+            String temp = longStr;
+            longStr = shortStr;
+            shortStr = temp;
+        }
+        for (int i = 0; i < longStr.length() - shortStr.length() + 1; i++) {
+            if (longStr.charAt(i) == shortStr.charAt(0)) {
+                int len = 0; // 记录匹配的字符长度
+                for (int j = 0; j < shortStr.length(); j++) {
+                    if (longStr.charAt(i + j) != shortStr.charAt(j)) {
+                        break;
+                    }
+                    len = j;
+                }
+                if (len == shortStr.length() - 1) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

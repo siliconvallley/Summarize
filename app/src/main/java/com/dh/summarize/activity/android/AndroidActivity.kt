@@ -53,6 +53,9 @@ class AndroidActivity : BaseActivity() {
             Constants.MATERIAL_DESIGN -> replaceFragment(MaterialDesignFragment.getInstance())
             Constants.RECYCLER_TOP_STOP -> replaceFragment(RecyclerTopStopFragment.getInstance())
             Constants.TEST_SVG -> replaceFragment(SvgFragment.getInstance())
+            Constants.ANDROID_ANNOTATION -> replaceFragment(AnnotationFragment.getInstance())
+            Constants.ANDROID_JETPACK -> replaceFragment(JetPackFragment.getInstance())
+            Constants.ANDROID_ASPECT -> replaceFragment(AspectFragment.newInstance())
         }
     }
 

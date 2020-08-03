@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -16,130 +15,160 @@
                 android:id="@+id/bt_component"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/four_component"
-                android:textSize="16sp"
-                android:textColor="@color/white"
                 android:background="@drawable/item_bg_pressed"
-                android:visibility="gone"/>
+                android:text="@string/four_component"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
 
         <Button
                 android:id="@+id/btTransVal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/item_bg_pressed"
                 android:text="@string/transfer_value"
-                android:textSize="16sp"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
 
         <Button
                 android:id="@+id/btPaint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Paint基础"
-                android:textSize="16sp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="Paint基础"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
 
         <Button
                 android:id="@+id/btCanvas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Canvas基础"
-                android:textSize="16sp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="Canvas基础"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
 
         <Button
                 android:id="@+id/btPath"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Path基础"
-                android:textSize="16sp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="Path基础"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
 
         <Button
                 android:id="@+id/btScreenAdapter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="屏幕适配（像素适配、百分比适配）"
-                android:textSize="16sp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="屏幕适配（像素适配、百分比适配）"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
 
         <Button
                 android:id="@+id/btScreenAdapter1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="刘海屏适配"
-                android:textSize="16sp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="刘海屏适配"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
 
         <Button
                 android:id="@+id/btTest"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="其他测试"
-                android:textSize="16sp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="其他测试"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
 
         <Button
                 android:id="@+id/btBottom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="BottomNavigationView"
-                android:textSize="16sp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="BottomNavigationView"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
 
         <Button
                 android:id="@+id/btMaterial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Material Design综合使用"
-                android:textSize="16sp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="Material Design综合使用"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
 
         <Button
                 android:id="@+id/btCusRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RecyclerView实现顶部悬停"
-                android:textSize="16sp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="RecyclerView实现顶部悬停"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
 
         <Button
                 android:id="@+id/btImm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="沉浸式"
-                android:textSize="16sp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="沉浸式"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
 
         <Button
                 android:id="@+id/btSvg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="SVG图"
-                android:textSize="16sp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="SVG图"
                 android:textColor="@color/white"
-                android:background="@drawable/item_bg_pressed"/>
+                android:textSize="16sp" />
+
+        <Button
+                android:id="@+id/btAnnotation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="Android注解"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        <Button
+                android:id="@+id/btJetpack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="Jetpack"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        <Button
+                android:id="@+id/btAspect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="Aspect"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
     </LinearLayout>
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/nav_graph_layout"
+        app:startDestination="@id/navigationFragment">
+
+    <fragment
+            android:id="@+id/navigationFragment"
+            android:name="com.dh.summarize.fragment.android.NavigationFragment"
+            android:label="fragment_navigation"
+            tools:layout="@layout/fragment_navigation">
+        <action
+                android:id="@+id/action_navigationFragment_to_navigationSecondFragment"
+                app:destination="@id/navigationSecondFragment"
+                app:enterAnim="@anim/enter_left"
+                app:exitAnim="@anim/exit_left"
+                app:popEnterAnim="@anim/enter_left"
+                app:popExitAnim="@anim/exit_left" />
+
+        <argument
+                android:name="userName"
+                android:defaultValue="unknown"
+                app:argType="string" />
+        <argument
+                android:name="age"
+                android:defaultValue="0"
+                app:argType="integer" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/navigationSecondFragment"
+            android:name="com.dh.summarize.fragment.android.NavigationSecondFragment"
+            android:label="fragment_navigation_second"
+            tools:layout="@layout/fragment_navigation_second" />
+</navigation>

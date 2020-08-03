@@ -1,9 +1,11 @@
 package com.dh.summarize.base
 
 import android.os.StrictMode
+import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.multidex.MultiDex
 import androidx.multidex.MultiDexApplication
 import com.dh.summarize.BuildConfig
+import com.dh.summarize.jetpack.ApplicationObserver
 import com.dh.summarize.utils.screen.UIUtils
 import leakcanary.AppWatcher
 import leakcanary.LeakCanary
@@ -18,7 +20,7 @@ class BaseApplication : MultiDexApplication() {
         // 这样写之后就会被编译成public static BaseApplication instance
         @JvmStatic
         lateinit var instance: BaseApplication
-        private set
+            private set
     }
 
     override fun onCreate() {
@@ -72,5 +74,7 @@ class BaseApplication : MultiDexApplication() {
         MultiDex.install(instance)
         // 3、初始化屏幕适配工具
         UIUtils.getInstance(instance)
+        // 3、监听Application的声明周期
+        ProcessLifecycleOwner.get().lifecycle.addObserver(ApplicationObserver())
     }
 }
