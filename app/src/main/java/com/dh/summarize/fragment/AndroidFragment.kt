@@ -45,6 +45,9 @@ class AndroidFragment : BaseFragment() {
             startActivity(mActivity, ImmersiveActivity::class.java)
         }
         btSvg.setOnClickListener(onClickListener)
+        btAnnotation.setOnClickListener(onClickListener)
+        btJetpack.setOnClickListener(onClickListener)
+        btAspect.setOnClickListener(onClickListener)
     }
 
     override fun initData() {
@@ -69,6 +72,9 @@ class AndroidFragment : BaseFragment() {
             R.id.btMaterial -> Constants.MATERIAL_DESIGN
             R.id.btCusRecycler -> Constants.RECYCLER_TOP_STOP
             R.id.btSvg -> Constants.TEST_SVG
+            R.id.btAnnotation -> Constants.ANDROID_ANNOTATION
+            R.id.btJetpack -> Constants.ANDROID_JETPACK
+            R.id.btAspect -> Constants.ANDROID_ASPECT
             else -> ""
         }
         bundle.putString(Constants.KEY_MARK, value)

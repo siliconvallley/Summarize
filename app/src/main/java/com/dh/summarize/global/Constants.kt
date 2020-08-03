@@ -15,6 +15,9 @@ object Constants {
     const val MATERIAL_DESIGN = "material_design"
     const val RECYCLER_TOP_STOP = "recycler_top_stop"
     const val TEST_SVG = "test_svg"
+    const val ANDROID_ANNOTATION = "android_annotation"
+    const val ANDROID_JETPACK = "android_jetpack"
+    const val ANDROID_ASPECT = "android_aspect"
 
     // Java
 

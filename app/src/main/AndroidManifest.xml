@@ -12,7 +12,9 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.android.ImmersiveActivity"></activity>
+        <activity android:name=".activity.android.NavigationActivity"/>
+        <activity android:name=".activity.android.LifeCycleActivity" />
+        <activity android:name=".activity.android.ImmersiveActivity" />
         <activity android:name=".activity.android.TestAndroidActivity" />
         <activity android:name=".activity.android.ShapedScreenActivity" />
         <activity android:name=".activity.algorithm.AlgorithmActivity" />
@@ -30,6 +32,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".service.MyLifeCycleService" />
     </application>
 
 </manifest>

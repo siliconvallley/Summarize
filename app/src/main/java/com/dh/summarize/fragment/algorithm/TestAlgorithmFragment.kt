@@ -39,6 +39,7 @@ class TestAlgorithmFragment : BaseFragment(), View.OnClickListener {
         btOrAndXor.setOnClickListener(this)
         btMostFrequent.setOnClickListener(this)
         btReverseLinkedList.setOnClickListener(this)
+        btMatchStr.setOnClickListener(this)
     }
 
     override fun initData() {
@@ -84,6 +85,10 @@ class TestAlgorithmFragment : BaseFragment(), View.OnClickListener {
                     AlgorithmUtils.getInstance().reverseLinkedList(cusLinkedList.node)
                 val nodeStr = cusLinkedList.outNode(node)
                 LogUtils.d(TAG, "反转链表: $nodeStr")
+            }
+            R.id.btMatchStr -> {
+                val isMatch = AlgorithmUtils.getInstance().matchStr("tree", "yellow_tree")
+                LogUtils.d(TAG, "短字符串是否包含在长字符串中:: $isMatch")
             }
         }
     }

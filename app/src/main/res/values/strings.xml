@@ -31,4 +31,6 @@
 
     <!--其他-->
     <string name="array_linked_list">ArrayList和LinkedList遍历</string>
+    
+    <string name="output_user_behavior">统计了：%s功能，在%s类的%s方法，用时%d ms</string>
 </resources>
