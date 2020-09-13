@@ -170,6 +170,26 @@
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
+        <Button
+                android:id="@+id/btHandler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="Handler"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        <Button
+                android:id="@+id/btStaticSkin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/item_bg_pressed"
+                android:text="静态换肤"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

@@ -56,6 +56,7 @@ class AndroidActivity : BaseActivity() {
             Constants.ANDROID_ANNOTATION -> replaceFragment(AnnotationFragment.getInstance())
             Constants.ANDROID_JETPACK -> replaceFragment(JetPackFragment.getInstance())
             Constants.ANDROID_ASPECT -> replaceFragment(AspectFragment.newInstance())
+            Constants.TEST_HANDLER -> replaceFragment(TestHandlerFragment.newInstance())
         }
     }
 

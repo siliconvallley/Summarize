@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TextView控件属性 -->
+    <declare-styleable name="SkinTextView">
+        <attr name="android:textColor" />
+        <attr name="android:background" />
+    </declare-styleable>
+
+    <!-- ImageView控件属性 -->
+    <declare-styleable name="SkinImageView">
+        <attr name="android:src" />
+    </declare-styleable>
+
+    <!-- Button控件继承TextView，此处parent语法通过，但无效果，不像style.xml -->
+    <declare-styleable name="SkinButton">
+        <attr name="android:background" />
+        <attr name="android:textColor" />
+    </declare-styleable>
+
+    <!-- EditText控件属性 -->
+    <declare-styleable name="SkinEditText">
+        <attr name="android:background"/>
+        <attr name="android:textColor"/>
+    </declare-styleable>
+
+    <!-- ConstraintLayout控件属性 -->
+    <declare-styleable name="SkinConstraintLayout">
+        <attr name="android:background"/>
+    </declare-styleable>
+</resources>

@@ -3,10 +3,7 @@ package com.dh.summarize.fragment
 import android.os.Bundle
 import android.view.View
 import com.dh.summarize.R
-import com.dh.summarize.activity.android.AndroidActivity
-import com.dh.summarize.activity.android.ImmersiveActivity
-import com.dh.summarize.activity.android.ShapedScreenActivity
-import com.dh.summarize.activity.android.TestAndroidActivity
+import com.dh.summarize.activity.android.*
 import com.dh.summarize.base.BaseFragment
 import com.dh.summarize.global.Constants
 import kotlinx.android.synthetic.main.android_fragment_layout.*
@@ -48,6 +45,10 @@ class AndroidFragment : BaseFragment() {
         btAnnotation.setOnClickListener(onClickListener)
         btJetpack.setOnClickListener(onClickListener)
         btAspect.setOnClickListener(onClickListener)
+        btHandler.setOnClickListener(onClickListener)
+        btStaticSkin.setOnClickListener {
+            startActivity(mActivity, TestSkinActivity::class.java)
+        }
     }
 
     override fun initData() {
@@ -75,6 +76,7 @@ class AndroidFragment : BaseFragment() {
             R.id.btAnnotation -> Constants.ANDROID_ANNOTATION
             R.id.btJetpack -> Constants.ANDROID_JETPACK
             R.id.btAspect -> Constants.ANDROID_ASPECT
+            R.id.btHandler -> Constants.TEST_HANDLER
             else -> ""
         }
         bundle.putString(Constants.KEY_MARK, value)

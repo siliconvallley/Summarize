@@ -18,6 +18,7 @@ object Constants {
     const val ANDROID_ANNOTATION = "android_annotation"
     const val ANDROID_JETPACK = "android_jetpack"
     const val ANDROID_ASPECT = "android_aspect"
+    const val TEST_HANDLER = "test_handler"
 
     // Java
 

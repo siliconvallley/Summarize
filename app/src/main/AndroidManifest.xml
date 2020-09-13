@@ -12,7 +12,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.android.NavigationActivity"/>
+        <activity android:name=".activity.android.TestSkinActivity"></activity>
+        <activity android:name=".activity.android.NavigationActivity" />
         <activity android:name=".activity.android.LifeCycleActivity" />
         <activity android:name=".activity.android.ImmersiveActivity" />
         <activity android:name=".activity.android.TestAndroidActivity" />

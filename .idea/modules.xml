@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Summarize.iml" filepath="$PROJECT_DIR$/.idea/Summarize.iml" group="Summarize" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Summarize/app" />
       <module fileurl="file://$PROJECT_DIR$/http/http.iml" filepath="$PROJECT_DIR$/http/http.iml" group="Summarize/http" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/static_skin/static_skin.iml" filepath="$PROJECT_DIR$/.idea/modules/static_skin/static_skin.iml" group="Summarize/static_skin" />
       <module fileurl="file://$PROJECT_DIR$/utils_library/utils_library.iml" filepath="$PROJECT_DIR$/utils_library/utils_library.iml" group="Summarize/utils_library" />
     </modules>
   </component>
