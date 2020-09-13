@@ -22,4 +22,7 @@
         <item>@color/aqua</item>
         <item>@color/yellow</item>
     </array>
+
+    <color name="day_night_bg_color">#FFD200</color>
+    <color name="day_night_text_color">#000000</color>
 </resources>
