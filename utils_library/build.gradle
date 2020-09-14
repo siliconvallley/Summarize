@@ -1,10 +1,16 @@
 apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+// 弱类型语言Groovy（糖果语法），如下定义的是String，但是可以赋值为int，它会自动推导
+//rootProject.ext.username = 12345
+// 这是简写，完整的语法${rootProject.ext.username}
+//println "${username}"
+println "${rootProject.ext.username}"
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.1"
+    buildToolsVersion "29.0.2"
 
 
     defaultConfig {
@@ -32,13 +38,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'androidx.appcompat:appcompat:1.1.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation "androidx.core:core-ktx:1.1.0"
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "androidx.core:core-ktx:1.3.1"
 }
 repositories {
     mavenCentral()
