@@ -69,7 +69,7 @@ class BaseApplication : MultiDexApplication() {
         AppWatcher.config.copy(watchDurationMillis = 2)
         AppWatcher.config.copy(watchActivities = false)*/
         // 自定义堆转储和分析
-        //LeakCanary.config = LeakCanary.config.copy(retainedVisibleThreshold = 3)
+        // LeakCanary.config = LeakCanary.config.copy(retainedVisibleThreshold = 3)
         // 2、分包
         MultiDex.install(instance)
         // 3、初始化屏幕适配工具
