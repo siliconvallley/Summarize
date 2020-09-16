@@ -18,7 +18,8 @@ Android学习总结，准备涉及kotlin、JAVA、算法，平时工作中遇到
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[PathMeasure介绍](https://blog.csdn.net/u013855006/article/details/102617096)  
 7、Android屏幕适配  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Android屏幕适配各种方案](https://blog.csdn.net/u013855006/article/details/102773870)
-
+8、gradle简单配置
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ---
 
 二、Java
