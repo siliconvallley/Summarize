@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.dh.summarize.R;
 import com.dh.summarize.activity.android.LifeCycleActivity;
 import com.dh.summarize.activity.android.NavigationActivity;
+import com.dh.summarize.activity.android.RoomActivity;
+import com.dh.summarize.activity.android.ViewModelActivity;
 import com.dh.summarize.base.BaseFragment;
 
 import org.jetbrains.annotations.NotNull;
@@ -23,6 +25,8 @@ public class JetPackFragment extends BaseFragment implements View.OnClickListene
 
     private Button btLifeCycle;
     private Button btNavigation;
+    private Button btViewModel;
+    private Button btRoom;
 
     public static JetPackFragment getInstance() {
         return new JetPackFragment();
@@ -37,12 +41,16 @@ public class JetPackFragment extends BaseFragment implements View.OnClickListene
     public void initViews(@NotNull View view) {
         btLifeCycle = view.findViewById(R.id.btLifeCycle);
         btNavigation = view.findViewById(R.id.btNavigation);
+        btViewModel = view.findViewById(R.id.btViewModel);
+        btRoom = view.findViewById(R.id.btRoom);
     }
 
     @Override
     public void initListener() {
         btLifeCycle.setOnClickListener(this);
         btNavigation.setOnClickListener(this);
+        btViewModel.setOnClickListener(this);
+        btRoom.setOnClickListener(this);
     }
 
     @Override
@@ -52,13 +60,15 @@ public class JetPackFragment extends BaseFragment implements View.OnClickListene
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btLifeCycle:
-                startActivity(mActivity, LifeCycleActivity.class);
-                break;
-            case R.id.btNavigation:
-                startActivity(mActivity, NavigationActivity.class);
-                break;
+        int viewId = v.getId();
+        if (viewId == R.id.btLifeCycle) {
+            startActivity(mActivity, LifeCycleActivity.class);
+        } else if (viewId == R.id.btNavigation) {
+            startActivity(mActivity, NavigationActivity.class);
+        } else if (viewId == R.id.btViewModel) {
+            startActivity(mActivity, ViewModelActivity.class);
+        } else if (viewId == R.id.btRoom) {
+            startActivity(mActivity, RoomActivity.class);
         }
     }
 }

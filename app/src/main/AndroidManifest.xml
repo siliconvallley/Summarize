@@ -12,7 +12,9 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.android.TestSkinActivity"></activity>
+        <activity android:name=".activity.android.RoomActivity"></activity>
+        <activity android:name=".activity.android.ViewModelActivity" />
+        <activity android:name=".activity.android.TestSkinActivity" />
         <activity android:name=".activity.android.NavigationActivity" />
         <activity android:name=".activity.android.LifeCycleActivity" />
         <activity android:name=".activity.android.ImmersiveActivity" />

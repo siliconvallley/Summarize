@@ -31,7 +31,7 @@ abstract class BaseActivity : AppCompatActivity() {
         // 初始化Activity
         mActivity = this
         // 获取系统保存的状态
-        saveInstanceState(savedInstanceState)
+        getSaveInstanceState(savedInstanceState)
         // 管理Activity
         activitys = WeakReference(this)
         ActivityCollector2.pushTask(activitys)
@@ -44,7 +44,19 @@ abstract class BaseActivity : AppCompatActivity() {
     /**
      * 获取保存的页面状态
      */
-    protected open fun saveInstanceState(savedInstanceState: Bundle?) {
+    protected open fun getSaveInstanceState(savedInstanceState: Bundle?) {
+
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        saveInstanceState(outState)
+    }
+
+    /**
+     * 在界面销毁之前保存数据，一定会被调用
+     */
+    protected open fun saveInstanceState(outState: Bundle) {
 
     }
 
