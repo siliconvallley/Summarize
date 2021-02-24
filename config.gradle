@@ -41,5 +41,10 @@ ext {
             "navigationFragment" : "androidx.navigation:navigation-fragment:2.3.0",
             "navigationUi"       : "androidx.navigation:navigation-ui:2.3.0",
             "legacySupportV4"    : "androidx.legacy:legacy-support-v4:1.0.0",
+            // ViewModel
+            "viewModel"          : "androidx.lifecycle:lifecycle-viewmodel:2.3.0-alpha02",
+            // room
+            "room-runtime"       : "androidx.room:room-runtime:2.2.5",
+            "room-compiler"      : "androidx.room:room-compiler:2.2.5"
     ]
 }
